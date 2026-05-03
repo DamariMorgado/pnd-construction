@@ -2,32 +2,78 @@
 
 Business website for **PND Construction (PND LLC)**, a licensed drywall contractor based in Mesa, AZ.
 
-## Files
+## File Structure
 
-| File | Description |
-|------|-------------|
-| `index.html` | Main page structure and content |
-| `styles.css` | All styling (dark theme, green accents) |
-| `script.js` | Gallery lightbox interaction |
+```
+pnd-construction/
+├── index.html            # HTML entry point
+├── package.json          # Project dependencies
+├── vite.config.js        # Vite bundler config
+├── tailwind.config.js    # Tailwind CSS config
+├── postcss.config.js     # PostCSS config
+└── src/
+    ├── main.jsx          # React entry point
+    ├── App.jsx           # Main site component (all sections + admin panel)
+    └── index.css         # Tailwind base styles
+```
 
-## How to Use
+## Tech Stack
 
-1. Open `index.html` in any browser — no build tools needed, pure HTML/CSS/JS.
-2. To deploy, upload all three files to any static host (GitHub Pages, Netlify, Vercel, etc.).
+- **React 18** — UI components
+- **Tailwind CSS** — Styling
+- **Vite** — Dev server and build tool
 
-## To Deploy on GitHub Pages
+## Getting Started
 
-1. Push all files to a repo
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, root folder
-4. Site will be live at `https://<username>.github.io/<repo-name>`
+### 1. Install dependencies
 
-## Customization
+```bash
+npm install
+```
 
-- **Phone/Address** — Search `602` to find all phone instances
-- **Social links** — Search `href="#"` in `index.html` to find the 3 social placeholders
-- **Colors** — Edit CSS variables at the top of `styles.css` (`:root` block)
-- **Content/copy** — All text is in `index.html`
+### 2. Start the dev server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+Output goes to the `dist/` folder — upload that to any host.
+
+## Admin Panel
+
+A floating **Admin** button in the bottom-right corner opens the dashboard.
+
+- **Default password:** `PNDadmin123`
+- Edit all content (headlines, services, phone, etc.) without touching code
+- View quote requests submitted from the contact form
+- All changes save automatically to the browser via localStorage
+
+## Deploying to GitHub Pages
+
+1. Install the GitHub Pages plugin:
+   ```bash
+   npm install --save-dev gh-pages
+   ```
+2. Add to `package.json` scripts:
+   ```json
+   "deploy": "gh-pages -d dist"
+   ```
+3. Add `base` to `vite.config.js`:
+   ```js
+   base: "/your-repo-name/";
+   ```
+4. Build and deploy:
+   ```bash
+   npm run build && npm run deploy
+   ```
 
 ## Business Info
 
@@ -35,3 +81,4 @@ Business website for **PND Construction (PND LLC)**, a licensed drywall contract
 - **Phone:** (602) 849-6384
 - **Address:** 8139 E 2nd Ave, Mesa, AZ 85208
 - **License:** ROC #357272 — B-3 General Remodeling & Repair Contractor
+- **License valid through:** February 2027
