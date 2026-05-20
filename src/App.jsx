@@ -43,7 +43,7 @@ const REPAIRS = [
       "Stained ceilings and softened drywall after roof or plumbing leaks.",
     circleColor: "#b08050",
     pentagonColor: "#5a9e42",
-    photos: [],
+    photos: ["/images/water1.jpg", "/images/water2.jpg", "/images/water3.jpg"],
   },
   {
     title: "Cracks",
