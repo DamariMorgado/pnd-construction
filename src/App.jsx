@@ -54,7 +54,7 @@ const REPAIRS = [
     photos: [],
   },
   {
-    title: "Nail Pops & Dents",
+    title: "Sheetrock",
     description:
       "Raised fasteners, impact dents, and small surface imperfections.",
     circleColor: "#888",
