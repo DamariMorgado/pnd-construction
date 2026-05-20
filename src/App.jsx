@@ -499,56 +499,16 @@ export default function App() {
           <div className="admin-panel">
             <div className="admin-head">
               <div className="admin-head-left">
-                <div
-                  style={{ background: "#fff", borderRadius: 12, padding: 8 }}
-                >
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="100" height="100" rx="20" fill="#111" />
-                    <polygon
-                      points="15,85 15,30 40,10 85,10 85,55 60,85"
-                      fill="#4fa33d"
-                    />
-                    <polygon
-                      points="15,85 15,30 40,10 85,10 85,55 60,85"
-                      fill="url(#stripes)"
-                      opacity="0.4"
-                    />
-                    <defs>
-                      <pattern
-                        id="stripes"
-                        width="10"
-                        height="10"
-                        patternTransform="rotate(45)"
-                        patternUnits="userSpaceOnUse"
-                      >
-                        <line
-                          x1="0"
-                          y1="0"
-                          x2="0"
-                          y2="10"
-                          stroke="#fff"
-                          strokeWidth="4"
-                        />
-                      </pattern>
-                    </defs>
-                    <text
-                      x="28"
-                      y="68"
-                      fontFamily="Arial Black, sans-serif"
-                      fontWeight="900"
-                      fontSize="36"
-                      fill="#fff"
-                    >
-                      P
-                    </text>
-                  </svg>
-                </div>
+                <img
+                  src="/pndlogo.png"
+                  alt="PND Construction"
+                  style={{
+                    width: 44,
+                    height: 44,
+                    objectFit: "contain",
+                    display: "block",
+                  }}
+                />
                 <div>
                   <div className="admin-head-title">Admin Dashboard</div>
                   <div className="admin-head-sub">Manage Website Content</div>
@@ -791,54 +751,16 @@ export default function App() {
         {/* Nav */}
         <nav className="nav">
           <div className="nav-logo">
-            <svg
-              width="64"
-              height="64"
-              viewBox="0 0 100 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="nav-logo-img"
-              style={{ padding: 0 }}
-            >
-              <rect width="100" height="100" rx="18" fill="#fff" />
-              <polygon
-                points="12,88 12,28 38,8 88,8 88,58 62,88"
-                fill="#4fa33d"
-              />
-              <polygon
-                points="12,88 12,28 38,8 88,8 88,58 62,88"
-                fill="url(#s2)"
-                opacity="0.35"
-              />
-              <defs>
-                <pattern
-                  id="s2"
-                  width="12"
-                  height="12"
-                  patternTransform="rotate(45)"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <line
-                    x1="0"
-                    y1="0"
-                    x2="0"
-                    y2="12"
-                    stroke="#000"
-                    strokeWidth="5"
-                  />
-                </pattern>
-              </defs>
-              <text
-                x="24"
-                y="74"
-                fontFamily="Arial Black, sans-serif"
-                fontWeight="900"
-                fontSize="44"
-                fill="#fff"
-              >
-                P
-              </text>
-            </svg>
+            <img
+              src="/pndlogo.png"
+              alt="PND Construction"
+              style={{
+                width: 80,
+                height: 80,
+                objectFit: "contain",
+                flexShrink: 0,
+              }}
+            />
             <div>
               <div className="nav-logo-tag">{content.brandTag}</div>
               <div className="nav-logo-name">{content.brandName}</div>
@@ -1060,7 +982,14 @@ export default function App() {
       </div>
 
       {/* PROCESS */}
-      <div className="process-bg section-full" id="process">
+      <div
+        style={{
+          background:
+            "linear-gradient(180deg, #1e3d1a 0%, #1a3316 25%, #152810 50%, #0f1e0b 75%, #080e06 90%, #111 100%)",
+        }}
+        className="section-full"
+        id="process"
+      >
         <div className="section-inner">
           <div className="eyebrow eyebrow-light">Process</div>
           <h2 className="section-title" style={{ color: "#fff" }}>
@@ -1143,32 +1072,292 @@ export default function App() {
         </div>
       </div>
 
+      {/* ABOUT THE OWNER */}
+      <div style={{ background: "#111", padding: "80px 0" }}>
+        <div className="section-inner">
+          <div
+            style={{
+              background:
+                "linear-gradient(160deg, #1a1a1a 0%, #1c1c1c 50%, #2a4a1e 100%)",
+              borderRadius: 28,
+              padding: "48px",
+              border: "1px solid rgba(79,163,61,0.2)",
+            }}
+          >
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 800,
+                textTransform: "uppercase",
+                letterSpacing: "0.35em",
+                color: "#4fa33d",
+                marginBottom: 16,
+              }}
+            >
+              About The Owner
+            </div>
+            <h2
+              style={{
+                fontSize: "clamp(26px, 3.5vw, 42px)",
+                fontWeight: 900,
+                color: "#fff",
+                lineHeight: 1.15,
+                marginBottom: 20,
+                maxWidth: 600,
+              }}
+            >
+              Built on honest work, clean repairs, and treating customers right.
+            </h2>
+            <p
+              style={{
+                fontSize: 16,
+                lineHeight: 1.75,
+                color: "rgba(255,255,255,0.7)",
+                maxWidth: 680,
+                marginBottom: 36,
+              }}
+            >
+              Hi, I'm Juan, owner of PND Construction. I started this company
+              with the goal of providing drywall repairs that homeowners can
+              feel confident about. I believe in showing up on time,
+              communicating clearly, and leaving every repair looking clean and
+              professional. From small wall patches to larger drywall damage
+              repairs, I treat every project like it's in my own home. My focus
+              has always been quality work, fair pricing, and making sure
+              customers feel comfortable throughout the process.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              {[
+                "Locally owned and operated",
+                "Focused primarily on drywall repair and texture matching",
+                "Clean workmanship and respectful service",
+                "Honest communication and straightforward pricing",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 14,
+                    background: "rgba(79,163,61,0.12)",
+                    border: "1px solid rgba(79,163,61,0.25)",
+                    borderRadius: 12,
+                    padding: "14px 18px",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 26,
+                      height: 26,
+                      borderRadius: "50%",
+                      background: "#4fa33d",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <span
+                      style={{ color: "#fff", fontSize: 13, fontWeight: 900 }}
+                    >
+                      ✓
+                    </span>
+                  </div>
+                  <span
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 600,
+                      color: "rgba(255,255,255,0.88)",
+                    }}
+                  >
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CONTACT */}
-      <div className="contact-bg" id="contact">
-        <div className="contact-inner">
+      <div
+        style={{
+          background: "#141414",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        id="contact"
+      >
+        {/* Same diagonal shapes as hero */}
+        <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              bottom: 0,
+              right: "-5%",
+              width: "55%",
+              background: "rgba(255,255,255,0.04)",
+              transform: "skewX(-12deg)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              bottom: 0,
+              right: "8%",
+              width: "35%",
+              background: "rgba(255,255,255,0.035)",
+              transform: "skewX(-12deg)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: "18%",
+              width: "20%",
+              height: "70%",
+              background: "rgba(100,160,80,0.18)",
+              transform: "skewX(-12deg)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: "26%",
+              width: "10%",
+              height: "50%",
+              background: "rgba(130,190,100,0.14)",
+              transform: "skewX(-12deg)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: "32%",
+              width: "6%",
+              height: "35%",
+              background: "rgba(160,210,130,0.12)",
+              transform: "skewX(-12deg)",
+            }}
+          />
+        </div>
+        <div
+          className="contact-inner"
+          style={{ position: "relative", zIndex: 2 }}
+        >
           <div>
-            <div className="eyebrow contact-eyebrow">Get Started</div>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 800,
+                textTransform: "uppercase",
+                letterSpacing: "0.35em",
+                color: "#4fa33d",
+                marginBottom: 12,
+              }}
+            >
+              Get Started
+            </div>
             <h2 className="contact-title">{content.contactHeading}</h2>
             <p className="contact-desc">{content.contactDesc}</p>
             {formMsg && (
-              <p className="save-msg" style={{ color: "#fff", marginTop: 16 }}>
+              <p
+                className="save-msg"
+                style={{ color: "#4fa33d", marginTop: 16 }}
+              >
                 {formMsg}
               </p>
             )}
           </div>
 
-          <div className="contact-card">
-            <div className="contact-info">
-              <div className="contact-info-label">Phone</div>
-              <div className="contact-info-value">{content.phone}</div>
+          <div
+            style={{
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(79,163,61,0.25)",
+              backdropFilter: "blur(12px)",
+              borderRadius: 32,
+              padding: 24,
+              display: "flex",
+              flexDirection: "column",
+              gap: 14,
+            }}
+          >
+            <div
+              style={{
+                background: "rgba(0,0,0,0.4)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: 16,
+                padding: "14px 18px",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 11,
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.25em",
+                  color: "#4fa33d",
+                  marginBottom: 6,
+                }}
+              >
+                Phone
+              </div>
+              <div style={{ fontSize: 19, fontWeight: 900, color: "#fff" }}>
+                {content.phone}
+              </div>
             </div>
-            <div className="contact-info">
-              <div className="contact-info-label">Service Area</div>
-              <div className="contact-info-value">{content.serviceArea}</div>
+            <div
+              style={{
+                background: "rgba(0,0,0,0.4)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: 16,
+                padding: "14px 18px",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 11,
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.25em",
+                  color: "#4fa33d",
+                  marginBottom: 6,
+                }}
+              >
+                Service Area
+              </div>
+              <div style={{ fontSize: 19, fontWeight: 900, color: "#fff" }}>
+                {content.serviceArea}
+              </div>
             </div>
-            <div className="contact-info">
-              <div className="contact-info-label">Email</div>
-              <div className="contact-info-value">{content.email}</div>
+            <div
+              style={{
+                background: "rgba(0,0,0,0.4)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: 16,
+                padding: "14px 18px",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 11,
+                  fontWeight: 800,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.25em",
+                  color: "#4fa33d",
+                  marginBottom: 6,
+                }}
+              >
+                Email
+              </div>
+              <div style={{ fontSize: 19, fontWeight: 900, color: "#fff" }}>
+                {content.email}
+              </div>
             </div>
             <form className="contact-form" onSubmit={submitForm}>
               <input
@@ -1178,6 +1367,11 @@ export default function App() {
                 onChange={(e) =>
                   setForm((p) => ({ ...p, name: e.target.value }))
                 }
+                style={{
+                  background: "rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  color: "#fff",
+                }}
               />
               <input
                 className="contact-input"
@@ -1186,6 +1380,11 @@ export default function App() {
                 onChange={(e) =>
                   setForm((p) => ({ ...p, phone: e.target.value }))
                 }
+                style={{
+                  background: "rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  color: "#fff",
+                }}
               />
               <textarea
                 className="contact-textarea"
@@ -1195,8 +1394,17 @@ export default function App() {
                 onChange={(e) =>
                   setForm((p) => ({ ...p, details: e.target.value }))
                 }
+                style={{
+                  background: "rgba(0,0,0,0.4)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  color: "#fff",
+                }}
               />
-              <button type="submit" className="btn-submit">
+              <button
+                type="submit"
+                className="btn-submit"
+                style={{ background: "#4fa33d" }}
+              >
                 Request Estimate
               </button>
             </form>

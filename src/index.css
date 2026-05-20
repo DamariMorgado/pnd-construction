@@ -1166,3 +1166,24 @@ textarea {
     transform: scale(1) translateY(0);
   }
 }
+
+/* ── Logo blend into dark background ── */
+.nav .nav-logo img {
+  mix-blend-mode: lighten;
+  filter: brightness(1.05);
+}
+
+/* ── Dark contact theme ── */
+.contact-inner {
+  color: #fff;
+}
+.contact-title {
+  color: #fff;
+}
+.contact-desc {
+  color: rgba(255, 255, 255, 0.7);
+}
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
