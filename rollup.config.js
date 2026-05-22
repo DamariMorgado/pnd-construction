@@ -1,23 +1,29 @@
-import typescript from '@rollup/plugin-typescript';
 import terser from '@rollup/plugin-terser';
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    {
-      file: 'dist/index.mjs',
-      format: 'esm',
-      sourcemap: true,
-    },
-    {
-      file: 'dist/index.cjs',
-      format: 'cjs',
-      exports: 'named',
-      sourcemap: true,
-    },
-  ],
-  plugins: [
-    typescript({ tsconfig: './tsconfig.json' }),
-    terser(),
-  ],
+const input = {
+  index: 'src/main.jsx',
+  // add cli only if file exists:
+  // cli: 'src/cli.js',
 };
+
+export default [
+  {
+    input,
+    output: [
+      {
+        dir: 'dist',
+        format: 'esm',
+        entryFileNames: '[name].js',
+        sourcemap: true,
+      },
+      {
+        dir: 'dist',
+        format: 'cjs',
+        entryFileNames: '[name].cjs',
+        exports: 'named',
+        sourcemap: true,
+      },
+    ],
+    plugins: [terser()],
+  },
+];
