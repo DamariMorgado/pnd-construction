@@ -1,13 +1,12 @@
 {
-  "name": "baseline-browser-mapping",
+  "name": "pnd-construction",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "build:lib": "rollup -c"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,21 +14,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.2.0",
-    "rollup": "^4.18.0",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "@rollup/plugin-terser": "^0.4.4",
-    "typescript": "^5.5.4",
-    "tslib": "^2.6.3"
-  },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    "vite": "^5.2.0"
   }
 }
