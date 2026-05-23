@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:rollup": "rollup -c"
+    "build": "rollup -c",
+    "build:rollup": "rollup -c",
+    "build:vite": "vite build"
   },
   "dependencies": {
     "react": "^18.2.0",
